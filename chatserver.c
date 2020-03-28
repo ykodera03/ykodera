@@ -39,7 +39,7 @@ int main (void){
     perror ("socket"); exit(1);
   }
   bzero(&servaddr, sizeof(servaddr));
-  servaddr.sin_family = AF_INET; //重要
+  servaddr.sin_family = AF_INET; 
   servaddr.sin_port = htons(10000); //ポート番号
   servaddr.sin_addr.s_addr = htonl (INADDR_ANY);
   
