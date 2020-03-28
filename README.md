@@ -27,7 +27,7 @@ int 型の配列であり，maxclients で指定した値だけ長さ�
 - nclients<br>
 int 型の変数であり，現在接続しているクライアントの数を示します．
 - servaddr<br>
-struct sockaddr in 型の構造体変数です．今回はIPv4を想定した通信を行うためこの型にしました．
+struct sockaddr in 型の構造体変数です．今回はIPv4を想定して通信を行うためこの型にしました．
 - listenfd<br>
 int 型の変数であり，socket()から返される待ち受け用のソケットです．
 - connfd<br>
