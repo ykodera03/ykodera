@@ -74,5 +74,5 @@ fd=4から接続を終了してみます。<br>
 <img width="500" alt="aaaaa" src="https://github.com/ykodera03/ykodera/blob/master/img/client-sample4.png">
 <br>
 <br>
-サーバ側では、fd=4のクライアントが接続を終了したことを確認できました。<br>
+サーバ側で、fd=4のクライアントが接続を終了したことを確認できました。<br>
 <img width="500" alt="aaaaa" src="https://github.com/ykodera03/ykodera/blob/master/img/server-sample4.png">
