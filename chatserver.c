@@ -136,7 +136,7 @@ void Message(int connfd){
     Delete(connfd);
   }
   
-  fwrite (buf, 1, nbytes, stderr); //サーバ側で確認しているだけ
+  fwrite (buf, 1, nbytes, stderr); //サーバ側で発言を記録
   for (int i = 0; i < nclients; i++){
 
     if(own != clients[i]){ // 自分以外のクライアントの場合
