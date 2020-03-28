@@ -42,5 +42,37 @@ int 型の変数であり，一度の入力で読み込める文字数を�
 char 型の配列であり，長さは変数 size の値だけとります．クライアントが入力した文字を格納します．
 
 ## 動作実行例
-chatserver.cをコンパイルし、実行させた状態でtelnetコマンドを通じて動作を確認しました。<br>
-```penguin$ telnet localhost 10000```
+chatserver.cをコンパイルし、実行させてみます。<br>次の画像はプログラムを実行しクライアントからの接続を待受している状況です。<br>
+<img width="500" alt="aaaaa" src="https://github.com/ykodera03/ykodera/blob/master/img/server-sample1.png">
+<br>
+クライアントの動作確認にはtelnetコマンドしました。<br>
+<img width="500" alt="aaaaa" src="https://github.com/ykodera03/ykodera/blob/master/img/client-sample1.png">
+<br>
+<br>
+クライアントからの接続をサーバ側で確認しました。接続のあったクライアントにはfd=4という識別子が割り振られていることが分かります。<br>
+<img width="500" alt="aaaaa" src="https://github.com/ykodera03/ykodera/blob/master/img/server-sample2.png">
+<br>
+<br>
+2人目のクライアントからも接続をしてみました。
+今度はサーバ側でfd=5という識別子が割り振られました。
+<br>
+<img width="500" alt="aaaaa" src="https://github.com/ykodera03/ykodera/blob/master/img/server-sample3.png">
+<br>
+<br>
+fd=4のクライアントから何か発言をしてみます。
+<br>
+<img width="500" alt="aaaaa" src="https://github.com/ykodera03/ykodera/blob/master/img/client-sample2.png">
+<br>
+<br>
+fd=5のクライアントにもメッセージが届いていることが確認できました。<br>
+(ユーザ側で確認できる識別子を表示させていないので画像上からは分からないですね汗)
+<br>
+<img width="500" alt="aaaaa" src="https://github.com/ykodera03/ykodera/blob/master/img/client-sample3.png">
+<br>
+<br>
+fd=4から接続を終了してみます。<br>
+<img width="500" alt="aaaaa" src="https://github.com/ykodera03/ykodera/blob/master/img/client-sample4.png">
+<br>
+<br>
+サーバ側では、fd=4のクライアントが接続を終了したことを確認できました。<br>
+<img width="500" alt="aaaaa" src="https://github.com/ykodera03/ykodera/blob/master/img/server-sample4.png">
